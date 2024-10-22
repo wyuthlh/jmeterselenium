@@ -1,0 +1,203 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation Instruction &mdash; Documentation of JMeter &amp; Selenium  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=7ab3649f" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Test Script Recorder with JMeter" href="testscript.html" />
+    <link rel="prev" title="System Requirement" href="requirement.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Documentation of JMeter & Selenium
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="prerequisites.html">Prerequisites</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="requirement.html">System Requirement</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Installation Instruction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#jmeter">JMeter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selenium">Selenium</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="testscript.html">Test Script Recorder with JMeter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functionaltesting.html">Functional Testing with Selenium</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Documentation of JMeter & Selenium</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="prerequisites.html">Prerequisites</a></li>
+      <li class="breadcrumb-item active">Installation Instruction</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/install.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installation-instruction">
+<h1>Installation Instruction<a class="headerlink" href="#installation-instruction" title="Link to this heading"></a></h1>
+<p>This section provides step-by-step installation instructions for both Apache JMeter and Selenium. Proper installation is crucial to ensure that you can effectively use these tools for your testing needs. Follow the outlined procedures to set up JMeter and Selenium on your system.</p>
+<hr class="docutils" />
+<section id="jmeter">
+<h2>JMeter<a class="headerlink" href="#jmeter" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>Step 1 - Download Java Development Kit (JDK).</dt><dd><ol class="lowerroman simple">
+<li><p>Go to the official <a class="reference external" href="https://www.oracle.com/java/technologies/downloads/#java11?er=221886">Oracle JDK website</a>.</p></li>
+<li><p>Choose the appropriate version for your operating system and install it.</p></li>
+<li><p>After installation, verify the JDK version by running java -version in your command prompt or terminal.</p></li>
+</ol>
+</dd>
+</dl>
+<img alt="_images/step-1.png" src="_images/step-1.png" />
+<dl class="simple">
+<dt>Step 2 - Download Apache JMeter:</dt><dd><ol class="lowerroman simple">
+<li><p>Visit the official Apache JMeter website.</p></li>
+<li><p>Scroll down to the “Binaries” section and download the latest version of JMeter for your operating system.</p></li>
+<li><p>Extract the downloaded .zip or .tgz file to a desired location on your machine.</p></li>
+</ol>
+</dd>
+</dl>
+<img alt="_images/step-2.png" src="_images/step-2.png" />
+<dl class="simple">
+<dt>Step 3 - Set Up Environment Variables (Windows only):</dt><dd><ol class="lowerroman simple">
+<li><p>Open Control Panel &gt; System &gt; Advanced System Settings &gt; Environment Variables.</p></li>
+<li><p>Under “System variables,” click New and add JAVA_HOME with the path to your JDK installation folder.</p></li>
+<li><p>Add JMeter’s bin folder to the system’s PATH variable by editing the Path variable and appending ;C:path-to-your-jmeter-folderbin.</p></li>
+</ol>
+</dd>
+</dl>
+<img alt="_images/step-31.png" src="_images/step-31.png" />
+<img alt="_images/step-32.png" src="_images/step-32.png" />
+<img alt="_images/step-33.png" src="_images/step-33.png" />
+<dl class="simple">
+<dt>Step 4 - JMeter Installation:</dt><dd><ol class="lowerroman simple">
+<li><p>Open the folder where you stored the downloaded JMeter zip file.</p></li>
+<li><p>Extract the contents of the zip file.</p></li>
+<li><p>Navigate to the bin folder within the extracted JMeter folder.</p></li>
+<li><p>Click on the ApacheJMeter.jar file.</p></li>
+<li><p>JMeter will launch the graphical user interface (GUI).</p></li>
+<li><p>If the JMeter GUI opens successfully, the installation is complete.</p></li>
+</ol>
+</dd>
+</dl>
+<img alt="_images/step-41.png" src="_images/step-41.png" />
+<img alt="_images/step-42.png" src="_images/step-42.png" />
+</section>
+<hr class="docutils" />
+<section id="selenium">
+<h2>Selenium<a class="headerlink" href="#selenium" title="Link to this heading"></a></h2>
+<dl>
+<dt><strong>Step 1 - Install Python</strong>:</dt><dd><p>Download Python from <a class="reference external" href="https://www.python.org">https://www.python.org</a> and click ‘Windows installer’ if using OS Windows.</p>
+</dd>
+<dt><strong>Step 2 - Install Pycharm</strong>:</dt><dd><p>Go to <a class="reference external" href="https://www.jetbrains.com/pycharm">https://www.jetbrains.com/pycharm</a> and click ‘Download’.</p>
+<img alt="_images/step-11.png" src="_images/step-11.png" />
+</dd>
+<dt><strong>Step 3 - Create New Project</strong>:</dt><dd><p>Open Pycharm &gt; File &gt; create new project.</p>
+</dd>
+<dt><strong>Step 4 - Add Selenium</strong>:</dt><dd><p>Pycharm : File &gt; Settings (“Interpreter setting” on windows) &gt; Project &gt;  Python interpreter.</p>
+</dd>
+<dt><strong>Step 5 - Add package</strong>:</dt><dd><p>Click ‘+’ to add new package .  Install selenium and webdriver _manager.</p>
+</dd>
+<dt><strong>Step 6 - Create 1st Test</strong>:</dt><dd><p>Right click on the project folder and select New &gt; Python file.</p>
+<img alt="_images/step-21.png" src="_images/step-21.png" />
+<img alt="_images/step-3.png" src="_images/step-3.png" />
+</dd>
+</dl>
+<p><strong>Step 7 - Add code for selenium test.</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.chrome.service</span> <span class="kn">import</span> <span class="n">Service</span> <span class="k">as</span> <span class="n">ChromeService</span>
+<span class="kn">from</span> <span class="nn">webdriver_manager.chrome</span> <span class="kn">import</span> <span class="n">ChromeDriverManager</span>
+<span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">(</span><span class="n">service</span><span class="o">=</span><span class="n">ChromeService</span><span class="p">(</span><span class="n">ChromeDriverManager</span><span class="p">()</span><span class="o">.</span><span class="n">install</span><span class="p">())</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">driver</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">driver</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="_images/step-4.png" src="_images/step-4.png" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="requirement.html" class="btn btn-neutral float-left" title="System Requirement" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="testscript.html" class="btn btn-neutral float-right" title="Test Script Recorder with JMeter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, DotDash Technologies&#39;s Interns.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

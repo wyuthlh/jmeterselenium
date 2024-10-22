@@ -1,0 +1,187 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Functional Testing with Selenium &mdash; Documentation of JMeter &amp; Selenium  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=7ab3649f" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Test Script Recorder with JMeter" href="testscript.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Documentation of JMeter & Selenium
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testscript.html">Test Script Recorder with JMeter</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Functional Testing with Selenium</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#login-functionality-testing">Login Functionality Testing:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#navigation-menu-functionality-testing">Navigation Menu Functionality Testing</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Documentation of JMeter & Selenium</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Functional Testing with Selenium</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/functionaltesting.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="functional-testing-with-selenium">
+<h1>Functional Testing with Selenium<a class="headerlink" href="#functional-testing-with-selenium" title="Link to this heading"></a></h1>
+<section id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h2>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Go to this website <a class="reference external" href="https://jmeter-plugins.org/wiki/WebDriverSampler/">https://jmeter-plugins.org/wiki/WebDriverSampler/</a> and click “Download”</p></li>
+<li><p>Selenium/Web Driver - copy paste all the lib files from the downloads to apache jmeter lib folder</p></li>
+<li><p>Go to this <a class="reference external" href="https://chromedriver.storage.googleapis.com/index.html?path=114.0.5735.90/">https://chromedriver.storage.googleapis.com/index.html?path=114.0.5735.90/</a> website and click “chromedriver_win32.zip”</p></li>
+<li><p>Chromedriver - Download the exe and paste the path under the licenses</p></li>
+<li><p>Restart Jmeter &gt;  Add Thread Group</p></li>
+<li><p>Under Thread Group &gt;  Add Sampler &gt; WebDriver Sampler &gt; Add Config Element &gt; Chrome Driver Config</p></li>
+<li><p>Place the location of chromedriver inside the licenses folder</p></li>
+<li><p>Add &gt; Listener &gt; View Result Tree</p></li>
+<li><p>Add &gt; Listener &gt; View Result in Table</p></li>
+<li><p>Save the file in Jmeter</p></li>
+<li><p>Can also add the user, seconds and also loop count to view the performance testing</p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="login-functionality-testing">
+<h2>Login Functionality Testing:<a class="headerlink" href="#login-functionality-testing" title="Link to this heading"></a></h2>
+<p><strong>Description</strong>:Verify that users can log in with valid credentials and are redirected to the home page.</p>
+<dl class="simple">
+<dt><strong>Steps</strong>:</dt><dd><ol class="arabic simple">
+<li><p>Navigate to the login page</p></li>
+<li><p>Enter a valid username and password</p></li>
+<li><p>Click the “Login” button</p></li>
+</ol>
+</dd>
+</dl>
+<p><strong>Expected Result</strong>: The user is redirected to the home page</p>
+<p><strong>Source Code</strong>:</p>
+</section>
+<hr class="docutils" />
+<section id="navigation-menu-functionality-testing">
+<h2>Navigation Menu Functionality Testing<a class="headerlink" href="#navigation-menu-functionality-testing" title="Link to this heading"></a></h2>
+<p><strong>Description</strong>: Verify that clicking the “Home” menu item redirects the user to the home page.</p>
+<dl class="simple">
+<dt><strong>Steps</strong>:</dt><dd><ol class="arabic simple">
+<li><p>Navigate to the homepage</p></li>
+<li><p>Click on the navigation bar menu item</p></li>
+<li><p>Select “Do Not Disturb”</p></li>
+</ol>
+</dd>
+</dl>
+<p><strong>Expected Result</strong>: The user is redirected to the Services page URL.</p>
+<p><strong>Source Code</strong>:
+.. code-block:: groovy</p>
+<blockquote>
+<div><p>// Step 4: Click the menu button
+WDS.sampleResult.sampleStart()
+def menuButton = WDS.browser.findElement(org.openqa.selenium.By.xpath(‘//<a href="#id1"><span class="problematic" id="id2">*</span></a>[&#64;id=”jsxc-roster”]/div[1]/div[3]/div[2]/div[1]’))
+menuButton.click()
+WDS.browser.manage().timeouts().implicitlyWait(10, java.util.concurrent.TimeUnit.SECONDS)
+WDS.sampleResult.sampleEnd()</p>
+<p>// Add 3 seconds of think time
+WDS.sampleResult.sampleStart()
+java.lang.Thread.sleep(3000)
+WDS.sampleResult.sampleEnd()</p>
+<p>// Step 5: Activate Do Not Disturb (DND)
+WDS.sampleResult.sampleStart()
+def dndButton = WDS.browser.findElement(org.openqa.selenium.By.cssSelector(“li.jsxc-dnd”))
+dndButton.click()
+WDS.browser.manage().timeouts().implicitlyWait(10, java.util.concurrent.TimeUnit.SECONDS)
+WDS.sampleResult.sampleEnd()</p>
+<p>// Add 3 seconds of think time
+WDS.sampleResult.sampleStart()
+java.lang.Thread.sleep(3000)
+WDS.sampleResult.sampleEnd()</p>
+</div></blockquote>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="testscript.html" class="btn btn-neutral float-left" title="Test Script Recorder with JMeter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, DotDash Technologies&#39;s Interns.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
