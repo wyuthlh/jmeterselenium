@@ -48,8 +48,16 @@
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Test Script Recorder with JMeter</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Test Script Recorder with JMeter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-the-proxy-for-the-recorder">Setting Up the Proxy for the Recorder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#recording-user-interactions-for-load-testing">Recording User Interactions for Load Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#managing-and-editing-recorded-test-plans">Managing and Editing Recorded Test Plans</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-and-analyzing-recorded-test-plans">Running and Analyzing Recorded Test Plans</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="functionaltesting.html">Functional Testing with Selenium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commonissues.html">Common Issues and Troubleshooting</a></li>
 </ul>
 
         </div>
@@ -78,9 +86,145 @@
              
   <section id="test-script-recorder-with-jmeter">
 <h1>Test Script Recorder with JMeter<a class="headerlink" href="#test-script-recorder-with-jmeter" title="Link to this heading"></a></h1>
-<p>Brief cover of different ways to use Jmeter (aka building custom test plans from scratch, from scripts or from recording)
-Mention how recorder is the simplest way to make an extensive test plan in short time
-Explain setup of proxy</p>
+<section id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h2>
+<p>Before you can begin using the Test Script Recorder, you need to set up a basic test plan in JMeter. This involves configuring your test plan and saving your work before starting the project.</p>
+<p><strong>Creating a Test Plan</strong>: To create a test plan:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Open JMeter and navigate to the Test Plan element (the root of every JMeter test).</p></li>
+<li><p>Right-click the Test Plan, select Add &gt; Threads (Users) &gt; Thread Group.</p></li>
+<li><p>Configure the thread group to simulate multiple users and set loop counts and ramp-up periods as needed.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Saving the Test Plan</strong>: To avoid losing your work:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Go to File &gt; Save As and name your test plan file. It is recommended to save the test plan at regular intervals to avoid losing progress.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="setting-up-the-proxy-for-the-recorder">
+<h2>Setting Up the Proxy for the Recorder<a class="headerlink" href="#setting-up-the-proxy-for-the-recorder" title="Link to this heading"></a></h2>
+<p>In order to use the Test Script Recorder, JMeter needs to intercept and capture your browser’s HTTP/HTTPS traffic. To do this, you must set up a proxy in both JMeter and your browser.</p>
+<ol class="arabic simple">
+<li><p>Configure JMeter Proxy</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Right-click on Test Plan, then select Add &gt; Non-Test Elements &gt; HTTP(S) Test Script Recorder.</p></li>
+<li><p>In the HTTP(S) Test Script Recorder window, configure the port (default is 8888) and ensure Target Controller is set to the appropriate location where the recorded requests will be stored (usually under Thread Group).</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Configure Your Browser</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Open your browser settings and navigate to the Network or Proxy section.</p></li>
+<li><p>Configure the browser to use a manual proxy, setting the IP address to localhost and the port to 8888 (or the port number set in JMeter).</p></li>
+<li><p>In Firefox or Chrome, disable caching in the developer tools to prevent cached responses from being recorded.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="recording-user-interactions-for-load-testing">
+<h2>Recording User Interactions for Load Testing<a class="headerlink" href="#recording-user-interactions-for-load-testing" title="Link to this heading"></a></h2>
+<p>Once the proxy is set up, you are ready to record real-time user interactions.</p>
+<ol class="arabic simple">
+<li><p>Start the Recording Session</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>In JMeter, ensure that the HTTP(S) Test Script Recorder is running, and begin performing actions in the browser, such as navigating to different pages, submitting forms, and clicking buttons.</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Capturing HTTP Requests</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Each interaction you perform in the browser will be captured by JMeter as an HTTP request and added to your test plan.</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>Organizing Recorded Steps</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Recorded interactions will appear under the Thread Group. You can organize them into different samplers, controllers, or folders to better structure your test.</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p>Saving Your Recorded Test Plan</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>After recording all necessary actions, save the test plan by clicking File &gt; Save.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="managing-and-editing-recorded-test-plans">
+<h2>Managing and Editing Recorded Test Plans<a class="headerlink" href="#managing-and-editing-recorded-test-plans" title="Link to this heading"></a></h2>
+<p>Once your recording is complete, it’s often necessary to clean up and fine-tune the test plan for efficiency and clarity.</p>
+<ol class="arabic simple">
+<li><p>Remove Unnecessary Requests</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Sometimes, JMeter captures extra requests that are not relevant to your test. Identify and remove these requests by selecting them in the Thread Group and pressing Delete.</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Edit Recorded Requests</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Modify recorded requests to better suit the test. For example, add parameters, modify headers, or configure different assertions to verify response data.</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>Add Assertions and Timers</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Use assertions to validate server responses, and add timers to simulate real user think times between requests.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="running-and-analyzing-recorded-test-plans">
+<h2>Running and Analyzing Recorded Test Plans<a class="headerlink" href="#running-and-analyzing-recorded-test-plans" title="Link to this heading"></a></h2>
+<p>After creating and refining the test plan, you can execute it to simulate the load and analyze the system’s performance.</p>
+<ol class="arabic simple">
+<li><p>Running the Test Plan</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>To run the test, click the Start button (green arrow) in the JMeter toolbar.</p></li>
+<li><p>JMeter will begin sending requests based on your recorded and configured test plan.</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Analyzing Test Results</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Use listeners such as View Results Tree and Summary Report to observe the test’s performance.</p></li>
+<li><p>Review metrics such as response times, throughput, error rates, and more to assess how well the system handles the load.</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>Identifying Bottlenecks</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Analyze slow responses or failed requests to identify performance bottlenecks. Use these insights to adjust system configurations or optimize the application.</p></li>
+</ul>
+</div></blockquote>
+</section>
 </section>
 
 

@@ -20,6 +20,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Common Issues and Troubleshooting" href="commonissues.html" />
     <link rel="prev" title="Test Script Recorder with JMeter" href="testscript.html" /> 
 </head>
 
@@ -50,10 +51,14 @@
 <li class="toctree-l1"><a class="reference internal" href="testscript.html">Test Script Recorder with JMeter</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Functional Testing with Selenium</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#login-functionality-testing">Login Functionality Testing:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#navigation-menu-functionality-testing">Navigation Menu Functionality Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#login-functionality-testing-on-carebiz">Login Functionality Testing on Carebiz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#navigation-menu-functionality-testing-on-carebiz">Navigation Menu Functionality Testing on Carebiz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#chat-message-functionality-testing-on-carebiz">Chat Message Functionality Testing on Carebiz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sidebar-navigation-and-settings-access-on-carebiz">Sidebar Navigation and Settings Access on Carebiz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sidebar-settings-and-logout-functionality-on-carebiz">Sidebar Settings and Logout Functionality on Carebiz</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="commonissues.html">Common Issues and Troubleshooting</a></li>
 </ul>
 
         </div>
@@ -85,26 +90,65 @@
 <section id="getting-started">
 <h2>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h2>
 <blockquote>
-<div><ol class="arabic simple">
-<li><p>Go to this website <a class="reference external" href="https://jmeter-plugins.org/wiki/WebDriverSampler/">https://jmeter-plugins.org/wiki/WebDriverSampler/</a> and click “Download”</p></li>
-<li><p>Selenium/Web Driver - copy paste all the lib files from the downloads to apache jmeter lib folder</p></li>
-<li><p>Go to this <a class="reference external" href="https://chromedriver.storage.googleapis.com/index.html?path=114.0.5735.90/">https://chromedriver.storage.googleapis.com/index.html?path=114.0.5735.90/</a> website and click “chromedriver_win32.zip”</p></li>
-<li><p>Chromedriver - Download the exe and paste the path under the licenses</p></li>
-<li><p>Restart Jmeter &gt;  Add Thread Group</p></li>
-<li><p>Under Thread Group &gt;  Add Sampler &gt; WebDriver Sampler &gt; Add Config Element &gt; Chrome Driver Config</p></li>
-<li><p>Place the location of chromedriver inside the licenses folder</p></li>
-<li><p>Add &gt; Listener &gt; View Result Tree</p></li>
-<li><p>Add &gt; Listener &gt; View Result in Table</p></li>
-<li><p>Save the file in Jmeter</p></li>
-<li><p>Can also add the user, seconds and also loop count to view the performance testing</p></li>
+<div><ol class="arabic">
+<li><p>Go to this website <a class="reference external" href="https://jmeter-plugins.org/wiki/WebDriverSampler/">jmeter-plugins.org</a> and click “Download”.</p>
+<blockquote>
+<div><img alt="_images/install-1.png" src="_images/install-1.png" />
+</div></blockquote>
+</li>
+<li><p>Selenium/Web Driver - copy paste all the lib files from the downloads to apache jmeter lib folder.</p></li>
+<li><p>Go to this <a class="reference external" href="https://chromedriver.storage.googleapis.com/index.html?path=114.0.5735.90/">Index of /114.0.5735.90/</a> website and click “chromedriver_win32.zip”.</p>
+<img alt="_images/install-2.png" src="_images/install-2.png" />
+</li>
+<li><p>Chromedriver - Download the exe and paste the path under the licenses.</p></li>
+<li><p>Restart Jmeter &gt;  Add Thread Group.</p>
+<blockquote>
+<div><img alt="_images/install-3.png" src="_images/install-3.png" />
+</div></blockquote>
+</li>
+<li><p>Under Thread Group &gt;  Add Sampler &gt; WebDriver Sampler &gt; Add Config Element &gt; Chrome Driver Config.</p>
+<blockquote>
+<div><img alt="_images/install-4.png" src="_images/install-4.png" />
+</div></blockquote>
+</li>
+<li><p>Place the location of chromedriver inside the licenses folder.</p>
+<blockquote>
+<div><img alt="_images/install-5.png" src="_images/install-5.png" />
+</div></blockquote>
+</li>
+<li><p>Add &gt; Listener &gt; View Result Tree.</p>
+<blockquote>
+<div><img alt="_images/install-6.png" src="_images/install-6.png" />
+</div></blockquote>
+</li>
+<li><p>Add &gt; Listener &gt; View Result in Table.</p>
+<blockquote>
+<div><img alt="_images/install-7.png" src="_images/install-7.png" />
+</div></blockquote>
+</li>
+<li><p>Save the file in Jmeter.</p>
+<blockquote>
+<div><img alt="_images/install-8.png" src="_images/install-8.png" />
+</div></blockquote>
+</li>
+<li><p>Can also add the user, seconds and also loop count to view the performance testing.</p>
+<blockquote>
+<div><img alt="_images/install-9.png" src="_images/install-9.png" />
+</div></blockquote>
+</li>
+<li><p>For using Selenium in JMeter, the tester can write the codes here at ‘WebDriver Sampler’.</p>
+<blockquote>
+<div><img alt="_images/install-10.png" src="_images/install-10.png" />
+</div></blockquote>
+</li>
 </ol>
 </div></blockquote>
 </section>
-<section id="login-functionality-testing">
-<h2>Login Functionality Testing:<a class="headerlink" href="#login-functionality-testing" title="Link to this heading"></a></h2>
+<section id="login-functionality-testing-on-carebiz">
+<h2>Login Functionality Testing on <a class="reference external" href="https://carebiz.dotdashtech.com/">Carebiz</a><a class="headerlink" href="#login-functionality-testing-on-carebiz" title="Link to this heading"></a></h2>
 <p><strong>Description</strong>:Verify that users can log in with valid credentials and are redirected to the home page.</p>
 <dl class="simple">
-<dt><strong>Steps</strong>:</dt><dd><ol class="arabic simple">
+<dt><strong>Steps</strong>:</dt><dd><ol class="lowerroman simple">
 <li><p>Navigate to the login page</p></li>
 <li><p>Enter a valid username and password</p></li>
 <li><p>Click the “Login” button</p></li>
@@ -113,44 +157,385 @@
 </dl>
 <p><strong>Expected Result</strong>: The user is redirected to the home page</p>
 <p><strong>Source Code</strong>:</p>
+<div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="c1">//Open CareBiz login page</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s1">&#39;https://carebiz.dotdashtech.com/&#39;</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">manage</span><span class="o">().</span><span class="na">timeouts</span><span class="o">().</span><span class="na">implicitlyWait</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="w"> </span><span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">concurrent</span><span class="o">.</span><span class="na">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Add 5 seconds of think time</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">5000</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Step 1: Enter the User ID</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="kt">def</span><span class="w"> </span><span class="n">userIdInput</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">findElement</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">openqa</span><span class="o">.</span><span class="na">selenium</span><span class="o">.</span><span class="na">By</span><span class="o">.</span><span class="na">cssSelector</span><span class="o">(</span><span class="s2">&quot;input[aria-invalid=&#39;false&#39;][type=&#39;text&#39;]&quot;</span><span class="o">))</span>
+<span class="n">userIdInput</span><span class="o">.</span><span class="na">click</span><span class="o">()</span>
+<span class="n">userIdInput</span><span class="o">.</span><span class="na">sendKeys</span><span class="o">(</span><span class="s2">&quot;afham&quot;</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Add 2 seconds of think time</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">2000</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Step 2: Enter the password</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="kt">def</span><span class="w"> </span><span class="n">passwordInput</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">findElement</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">openqa</span><span class="o">.</span><span class="na">selenium</span><span class="o">.</span><span class="na">By</span><span class="o">.</span><span class="na">cssSelector</span><span class="o">(</span><span class="s2">&quot;input[aria-invalid=&#39;false&#39;][type=&#39;password&#39;]&quot;</span><span class="o">))</span>
+<span class="n">passwordInput</span><span class="o">.</span><span class="na">click</span><span class="o">()</span>
+<span class="n">passwordInput</span><span class="o">.</span><span class="na">sendKeys</span><span class="o">(</span><span class="s2">&quot;abc12345&quot;</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Add 2 seconds of think time</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">2000</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Step 3: Click the login button</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="kt">def</span><span class="w"> </span><span class="n">loginButton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">findElement</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">openqa</span><span class="o">.</span><span class="na">selenium</span><span class="o">.</span><span class="na">By</span><span class="o">.</span><span class="na">cssSelector</span><span class="o">(</span><span class="s2">&quot;button.cblogin-btn&quot;</span><span class="o">))</span>
+<span class="n">loginButton</span><span class="o">.</span><span class="na">click</span><span class="o">()</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">manage</span><span class="o">().</span><span class="na">timeouts</span><span class="o">().</span><span class="na">implicitlyWait</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="w"> </span><span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">concurrent</span><span class="o">.</span><span class="na">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Add 5 seconds of think time</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">5000</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+</pre></div>
+</div>
 </section>
 <hr class="docutils" />
-<section id="navigation-menu-functionality-testing">
-<h2>Navigation Menu Functionality Testing<a class="headerlink" href="#navigation-menu-functionality-testing" title="Link to this heading"></a></h2>
-<p><strong>Description</strong>: Verify that clicking the “Home” menu item redirects the user to the home page.</p>
+<section id="navigation-menu-functionality-testing-on-carebiz">
+<h2>Navigation Menu Functionality Testing on <a class="reference external" href="https://carebiz.dotdashtech.com/">Carebiz</a><a class="headerlink" href="#navigation-menu-functionality-testing-on-carebiz" title="Link to this heading"></a></h2>
+<p><strong>Description</strong>: Verify that clicking the “Navigation” menu item redirects the user to the select the options.</p>
 <dl class="simple">
-<dt><strong>Steps</strong>:</dt><dd><ol class="arabic simple">
+<dt><strong>Steps</strong>:</dt><dd><ol class="lowerroman simple">
 <li><p>Navigate to the homepage</p></li>
 <li><p>Click on the navigation bar menu item</p></li>
 <li><p>Select “Do Not Disturb”</p></li>
 </ol>
 </dd>
 </dl>
-<p><strong>Expected Result</strong>: The user is redirected to the Services page URL.</p>
-<p><strong>Source Code</strong>:
-.. code-block:: groovy</p>
-<blockquote>
-<div><p>// Step 4: Click the menu button
-WDS.sampleResult.sampleStart()
-def menuButton = WDS.browser.findElement(org.openqa.selenium.By.xpath(‘//<a href="#id1"><span class="problematic" id="id2">*</span></a>[&#64;id=”jsxc-roster”]/div[1]/div[3]/div[2]/div[1]’))
-menuButton.click()
-WDS.browser.manage().timeouts().implicitlyWait(10, java.util.concurrent.TimeUnit.SECONDS)
-WDS.sampleResult.sampleEnd()</p>
-<p>// Add 3 seconds of think time
-WDS.sampleResult.sampleStart()
-java.lang.Thread.sleep(3000)
-WDS.sampleResult.sampleEnd()</p>
-<p>// Step 5: Activate Do Not Disturb (DND)
-WDS.sampleResult.sampleStart()
-def dndButton = WDS.browser.findElement(org.openqa.selenium.By.cssSelector(“li.jsxc-dnd”))
-dndButton.click()
-WDS.browser.manage().timeouts().implicitlyWait(10, java.util.concurrent.TimeUnit.SECONDS)
-WDS.sampleResult.sampleEnd()</p>
-<p>// Add 3 seconds of think time
-WDS.sampleResult.sampleStart()
-java.lang.Thread.sleep(3000)
-WDS.sampleResult.sampleEnd()</p>
-</div></blockquote>
+<p><strong>Expected Result</strong>: The user status is now on “Do Not Disturb”.</p>
+<p><strong>Source Code</strong>:</p>
+<div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="c1">// Step 4: Click the menu button</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="kt">def</span><span class="w"> </span><span class="n">menuButton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">findElement</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">openqa</span><span class="o">.</span><span class="na">selenium</span><span class="o">.</span><span class="na">By</span><span class="o">.</span><span class="na">xpath</span><span class="o">(</span><span class="s1">&#39;//*[@id=&quot;jsxc-roster&quot;]/div[1]/div[3]/div[2]/div[1]&#39;</span><span class="o">))</span>
+<span class="n">menuButton</span><span class="o">.</span><span class="na">click</span><span class="o">()</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">manage</span><span class="o">().</span><span class="na">timeouts</span><span class="o">().</span><span class="na">implicitlyWait</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="w"> </span><span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">concurrent</span><span class="o">.</span><span class="na">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Add 3 seconds of think time</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">3000</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Step 5: Activate Do Not Disturb (DND)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="kt">def</span><span class="w"> </span><span class="n">dndButton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">findElement</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">openqa</span><span class="o">.</span><span class="na">selenium</span><span class="o">.</span><span class="na">By</span><span class="o">.</span><span class="na">cssSelector</span><span class="o">(</span><span class="s2">&quot;li.jsxc-dnd&quot;</span><span class="o">))</span>
+<span class="n">dndButton</span><span class="o">.</span><span class="na">click</span><span class="o">()</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">manage</span><span class="o">().</span><span class="na">timeouts</span><span class="o">().</span><span class="na">implicitlyWait</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="w"> </span><span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">concurrent</span><span class="o">.</span><span class="na">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Add 3 seconds of think time</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">3000</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="chat-message-functionality-testing-on-carebiz">
+<h2>Chat Message Functionality Testing on <a class="reference external" href="https://carebiz.dotdashtech.com/">Carebiz</a><a class="headerlink" href="#chat-message-functionality-testing-on-carebiz" title="Link to this heading"></a></h2>
+<p><strong>Description</strong>: Tests that users can open the chat, select a contact, send a message, and close the chat window.</p>
+<dl class="simple">
+<dt><strong>Steps</strong>:</dt><dd><ol class="lowerroman simple">
+<li><p>Click on the chat icon to open the chat window.</p></li>
+<li><p>Select a chat contact from the list.</p></li>
+<li><p>Enter the message “Hi” and send it.</p></li>
+<li><p>Verify that the message appears in the chat.</p></li>
+<li><p>Close the chat window.</p></li>
+</ol>
+</dd>
+<dt><strong>Expected Result</strong>:</dt><dd><ol class="arabic simple">
+<li><p>Open Chat Window: The chat window should open when the chat icon or button is clicked.</p></li>
+<li><p>Select a Chat: The selected chat conversation should load, displaying any previous messages if they exist.</p></li>
+<li><p>Send a Message: The message “Hi” should appear in the chat conversation after it is sent.</p></li>
+<li><p>Close Chat Window: The chat window should close when the close button or icon is clicked</p></li>
+</ol>
+</dd>
+</dl>
+<p><strong>Source Code</strong>:</p>
+<div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="c1">// Step 6: Open the message button</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="kt">def</span><span class="w"> </span><span class="n">messageButton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">findElement</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">openqa</span><span class="o">.</span><span class="na">selenium</span><span class="o">.</span><span class="na">By</span><span class="o">.</span><span class="na">cssSelector</span><span class="o">(</span><span class="s2">&quot;span.MuiBottomNavigationAction-wrapper&quot;</span><span class="o">))</span>
+<span class="n">messageButton</span><span class="o">.</span><span class="na">click</span><span class="o">()</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">manage</span><span class="o">().</span><span class="na">timeouts</span><span class="o">().</span><span class="na">implicitlyWait</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="w"> </span><span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">concurrent</span><span class="o">.</span><span class="na">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Add 3 seconds of think time</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">3000</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Step 7: Select a chat</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="kt">def</span><span class="w"> </span><span class="n">chatElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">findElement</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">openqa</span><span class="o">.</span><span class="na">selenium</span><span class="o">.</span><span class="na">By</span><span class="o">.</span><span class="na">cssSelector</span><span class="o">(</span><span class="s2">&quot;div.jsxc-bar__caption__primary[title=&#39;syafik@chat.carebiz.dotdashtech.com&#39;]&quot;</span><span class="o">))</span>
+<span class="n">chatElement</span><span class="o">.</span><span class="na">click</span><span class="o">()</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">manage</span><span class="o">().</span><span class="na">timeouts</span><span class="o">().</span><span class="na">implicitlyWait</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="w"> </span><span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">concurrent</span><span class="o">.</span><span class="na">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Add 3 seconds of think time</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">3000</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Step 8: Type and send a message</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="kt">def</span><span class="w"> </span><span class="n">messageBox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">findElement</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">openqa</span><span class="o">.</span><span class="na">selenium</span><span class="o">.</span><span class="na">By</span><span class="o">.</span><span class="na">cssSelector</span><span class="o">(</span><span class="s2">&quot;textarea.jsxc-message-input&quot;</span><span class="o">))</span>
+<span class="n">messageBox</span><span class="o">.</span><span class="na">sendKeys</span><span class="o">(</span><span class="s2">&quot;hello&quot;</span><span class="o">)</span>
+<span class="n">messageBox</span><span class="o">.</span><span class="na">sendKeys</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">openqa</span><span class="o">.</span><span class="na">selenium</span><span class="o">.</span><span class="na">Keys</span><span class="o">.</span><span class="na">RETURN</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Add 3 seconds of think time</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">3000</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Step 9: Close the chat</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="kt">def</span><span class="w"> </span><span class="n">closeChatButton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">findElement</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">openqa</span><span class="o">.</span><span class="na">selenium</span><span class="o">.</span><span class="na">By</span><span class="o">.</span><span class="na">cssSelector</span><span class="o">(</span><span class="s2">&quot;i.jsxc-icon-close&quot;</span><span class="o">))</span>
+<span class="n">closeChatButton</span><span class="o">.</span><span class="na">click</span><span class="o">()</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">manage</span><span class="o">().</span><span class="na">timeouts</span><span class="o">().</span><span class="na">implicitlyWait</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="w"> </span><span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">concurrent</span><span class="o">.</span><span class="na">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Add 3 seconds of think time</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">3000</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="sidebar-navigation-and-settings-access-on-carebiz">
+<h2>Sidebar Navigation and Settings Access on <a class="reference external" href="https://carebiz.dotdashtech.com/">Carebiz</a><a class="headerlink" href="#sidebar-navigation-and-settings-access-on-carebiz" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt><strong>Description</strong>:</dt><dd><ol class="arabic simple">
+<li><p>Open Sidebar: Clicks the sidebar button and checks if the sidebar opens.</p></li>
+<li><p>Access Settings: Selects the settings option from the sidebar and verifies the settings menu opens.</p></li>
+<li><p>Navigate to Account Settings: Clicks the account button to view account-related options.</p></li>
+<li><p>Select and View General Settings: Selects “General” and verifies that the page loads.</p></li>
+<li><p>Return to Previous Menu: Uses the back button to navigate to the main settings menu.</p></li>
+<li><p>Close Settings: Clicks to close the settings and verifies it’s closed</p></li>
+</ol>
+</dd>
+<dt><strong>Steps</strong>:</dt><dd><ol class="lowerroman simple">
+<li><p>Open Sidebar: Click the three-line menu button to reveal the sidebar.</p></li>
+<li><p>Access Settings: Select the “Settings” option from the sidebar.</p></li>
+<li><p>Navigate to Account Settings: Click on the “Account” option within the settings menu.</p></li>
+<li><p>Select and View General Settings: Click on “General” under the account settings to view general account information.</p></li>
+<li><p>Return to Previous Menu: Use the “Back” button to navigate back to the main settings menu.</p></li>
+<li><p>Close Settings: Click the close button to exit the settings menu and return to the main page.</p></li>
+</ol>
+</dd>
+<dt><strong>Expected Results</strong>:</dt><dd><ol class="arabic simple">
+<li><p>Open Sidebar: The sidebar should open and display all available menu options when the three-line button is clicked.</p></li>
+<li><p>Access Settings: The settings menu should load, showing various settings options like Account, Privacy, etc.</p></li>
+<li><p>Navigate to Account Settings: The user should be able to view account-related settings, confirming the navigation is successful.</p></li>
+<li><p>Select and View General Settings: The “General” settings page should load and display relevant general account details.</p></li>
+<li><p>Return to Previous Menu: The main settings menu should reappear, indicating the user has navigated back successfully.</p></li>
+<li><p>Close Settings: The settings menu should close, bringing the user back to the main application screen or the previous active page.</p></li>
+</ol>
+</dd>
+</dl>
+<p><strong>Source Code</strong>:</p>
+<div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="c1">// Step 10: Click the three-line button (menu)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="kt">def</span><span class="w"> </span><span class="n">threeLineButton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">findElement</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">openqa</span><span class="o">.</span><span class="na">selenium</span><span class="o">.</span><span class="na">By</span><span class="o">.</span><span class="na">cssSelector</span><span class="o">(</span><span class="s2">&quot;i.jsxc-icon-menu&quot;</span><span class="o">))</span>
+<span class="n">threeLineButton</span><span class="o">.</span><span class="na">click</span><span class="o">()</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">manage</span><span class="o">().</span><span class="na">timeouts</span><span class="o">().</span><span class="na">implicitlyWait</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="w"> </span><span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">concurrent</span><span class="o">.</span><span class="na">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Add 3 seconds of think time</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">3000</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Step 11: Click on the Settings button</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="kt">def</span><span class="w"> </span><span class="n">settingsButton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">findElement</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">openqa</span><span class="o">.</span><span class="na">selenium</span><span class="o">.</span><span class="na">By</span><span class="o">.</span><span class="na">cssSelector</span><span class="o">(</span><span class="s2">&quot;li.jsxc-settings&quot;</span><span class="o">))</span>
+<span class="n">settingsButton</span><span class="o">.</span><span class="na">click</span><span class="o">()</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">manage</span><span class="o">().</span><span class="na">timeouts</span><span class="o">().</span><span class="na">implicitlyWait</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="w"> </span><span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">concurrent</span><span class="o">.</span><span class="na">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Add 3 seconds of think time</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">3000</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Step 12: Click the Account button</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="k">try</span><span class="w"> </span><span class="o">{</span>
+<span class="kt">def</span><span class="w"> </span><span class="n">accountButton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">findElement</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">openqa</span><span class="o">.</span><span class="na">selenium</span><span class="o">.</span><span class="na">By</span><span class="o">.</span><span class="na">cssSelector</span><span class="o">(</span><span class="s2">&quot;li.jsxc-list__item.jsxc-list__item--clickable div.jsxc-list__text div.jsxc-list__text__primary&quot;</span><span class="o">))</span>
+<span class="w">    </span><span class="n">accountButton</span><span class="o">.</span><span class="na">click</span><span class="o">()</span>
+<span class="o">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="o">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">println</span><span class="o">(</span><span class="s2">&quot;Error finding the Account button: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="o">)</span>
+<span class="o">}</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Add 3 seconds of think time</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">3000</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Step 13: Click on the General button</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="kt">def</span><span class="w"> </span><span class="n">generalButton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">findElement</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">openqa</span><span class="o">.</span><span class="na">selenium</span><span class="o">.</span><span class="na">By</span><span class="o">.</span><span class="na">cssSelector</span><span class="o">(</span><span class="s2">&quot;button.jsxc-page__subheadline&quot;</span><span class="o">))</span>
+<span class="n">generalButton</span><span class="o">.</span><span class="na">click</span><span class="o">()</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">manage</span><span class="o">().</span><span class="na">timeouts</span><span class="o">().</span><span class="na">implicitlyWait</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="w"> </span><span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">concurrent</span><span class="o">.</span><span class="na">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Add 3 seconds of think time</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">3000</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Step 14: Click the Back button</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="kt">def</span><span class="w"> </span><span class="n">backButton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">findElement</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">openqa</span><span class="o">.</span><span class="na">selenium</span><span class="o">.</span><span class="na">By</span><span class="o">.</span><span class="na">cssSelector</span><span class="o">(</span><span class="s2">&quot;h1.jsxc-page__headline.jsxc-clickable&quot;</span><span class="o">))</span>
+<span class="n">backButton</span><span class="o">.</span><span class="na">click</span><span class="o">()</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">manage</span><span class="o">().</span><span class="na">timeouts</span><span class="o">().</span><span class="na">implicitlyWait</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="w"> </span><span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">concurrent</span><span class="o">.</span><span class="na">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Add 3 seconds of think time</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">3000</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Step 15: Click the Close Settings button</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="k">try</span><span class="w"> </span><span class="o">{</span>
+<span class="kt">def</span><span class="w"> </span><span class="n">closeSettingsButton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">findElement</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">openqa</span><span class="o">.</span><span class="na">selenium</span><span class="o">.</span><span class="na">By</span><span class="o">.</span><span class="na">cssSelector</span><span class="o">(</span><span class="s2">&quot;div.jsxc-dialog-close.jsxc-js-close&quot;</span><span class="o">))</span>
+<span class="w">    </span><span class="n">closeSettingsButton</span><span class="o">.</span><span class="na">click</span><span class="o">()</span>
+<span class="o">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="o">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">println</span><span class="o">(</span><span class="s2">&quot;Error finding the Close Settings button: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="o">)</span>
+<span class="o">}</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Add 3 seconds of think time</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">3000</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="sidebar-settings-and-logout-functionality-on-carebiz">
+<h2>Sidebar Settings and Logout Functionality on <a class="reference external" href="https://carebiz.dotdashtech.com/">Carebiz</a><a class="headerlink" href="#sidebar-settings-and-logout-functionality-on-carebiz" title="Link to this heading"></a></h2>
+<p><strong>Description</strong>: This test validates the Settings and Logout functionalities via the sidebar menu. It ensures that users can open the sidebar, access the settings menu, navigate to the “About” section to view the debug log, close the settings, and then successfully log out. This sequence is essential for testing both the application’s settings access and user session management.</p>
+<dl class="simple">
+<dt><strong>Steps</strong>:</dt><dd><ol class="lowerroman simple">
+<li><p>Open Sidebar: Click the three-line button to open the sidebar.</p></li>
+<li><p>Access Settings: Select the “Settings” option from the sidebar menu.</p></li>
+<li><p>Navigate to About Section: Click on the “About” option within the settings menu.</p></li>
+<li><p>View Debug Log: Click the “Show Debug Log” button to display the debug log.</p></li>
+<li><p>Close Debug Log Tab: Close the debug log tab and return to the main screen.</p></li>
+<li><p>Open Sidebar Again: Click the three-line button to reopen the sidebar.</p></li>
+<li><p>Log Out: Select the “Logout” option from the sidebar menu to log out of the application.</p></li>
+</ol>
+</dd>
+<dt><strong>Expected Result</strong>:</dt><dd><ol class="arabic simple">
+<li><p>Open Sidebar: The sidebar should open, displaying all available options.</p></li>
+<li><p>Access Settings: The settings menu should appear, showing various options like Account, Privacy, About, etc.</p></li>
+<li><p>Navigate to About Section: The user should be able to access the “About” section, confirming that the navigation is successful.</p></li>
+<li><p>View Debug Log: The debug log should be displayed, showing technical details or logs as expected.</p></li>
+<li><p>Close Debug Log Tab: The debug log should close, and the user should return to the main settings or the previous screen.</p></li>
+<li><p>Open Sidebar Again: The sidebar should reopen, displaying menu options including “Logout.”</p></li>
+<li><p>Log Out: The user should be logged out of the application and redirected to the login page or the application’s main landing page.</p></li>
+</ol>
+</dd>
+</dl>
+<p><strong>Source Code</strong>:</p>
+<div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="c1">// Step 16: Click the three-line button (menu) again</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="n">threeLineButton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">findElement</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">openqa</span><span class="o">.</span><span class="na">selenium</span><span class="o">.</span><span class="na">By</span><span class="o">.</span><span class="na">cssSelector</span><span class="o">(</span><span class="s2">&quot;i.jsxc-icon-menu&quot;</span><span class="o">))</span>
+<span class="n">threeLineButton</span><span class="o">.</span><span class="na">click</span><span class="o">()</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">manage</span><span class="o">().</span><span class="na">timeouts</span><span class="o">().</span><span class="na">implicitlyWait</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="w"> </span><span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">concurrent</span><span class="o">.</span><span class="na">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Add 3 seconds of think time</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">3000</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Step 17: Click on the About button</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="kt">def</span><span class="w"> </span><span class="n">aboutButton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">findElement</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">openqa</span><span class="o">.</span><span class="na">selenium</span><span class="o">.</span><span class="na">By</span><span class="o">.</span><span class="na">cssSelector</span><span class="o">(</span><span class="s2">&quot;li.jsxc-about&quot;</span><span class="o">))</span>
+<span class="n">aboutButton</span><span class="o">.</span><span class="na">click</span><span class="o">()</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">manage</span><span class="o">().</span><span class="na">timeouts</span><span class="o">().</span><span class="na">implicitlyWait</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="w"> </span><span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">concurrent</span><span class="o">.</span><span class="na">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Add 3 seconds of think time</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">3000</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Add 3 seconds of think time after scrolling</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">3000</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Step 18: Click the Show Debug Log button</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="kt">def</span><span class="w"> </span><span class="n">debugLogButton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">findElement</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">openqa</span><span class="o">.</span><span class="na">selenium</span><span class="o">.</span><span class="na">By</span><span class="o">.</span><span class="na">cssSelector</span><span class="o">(</span><span class="s2">&quot;button.jsxc-button--default.jsxc-debug-log&quot;</span><span class="o">))</span>
+<span class="n">debugLogButton</span><span class="o">.</span><span class="na">click</span><span class="o">()</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">manage</span><span class="o">().</span><span class="na">timeouts</span><span class="o">().</span><span class="na">implicitlyWait</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="w"> </span><span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">concurrent</span><span class="o">.</span><span class="na">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Add 3 seconds of think time</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">3000</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Step 19: Close the About dialog</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="kt">def</span><span class="w"> </span><span class="n">closeAboutDialogButton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">findElement</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">openqa</span><span class="o">.</span><span class="na">selenium</span><span class="o">.</span><span class="na">By</span><span class="o">.</span><span class="na">cssSelector</span><span class="o">(</span><span class="s2">&quot;div.jsxc-dialog-close.jsxc-js-close&quot;</span><span class="o">))</span>
+<span class="n">closeAboutDialogButton</span><span class="o">.</span><span class="na">click</span><span class="o">()</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">manage</span><span class="o">().</span><span class="na">timeouts</span><span class="o">().</span><span class="na">implicitlyWait</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="w"> </span><span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">concurrent</span><span class="o">.</span><span class="na">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Add 5 seconds of think time</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">5000</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Step 20: Click the three-line button (menu) again</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="n">threeLineButton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">findElement</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">openqa</span><span class="o">.</span><span class="na">selenium</span><span class="o">.</span><span class="na">By</span><span class="o">.</span><span class="na">cssSelector</span><span class="o">(</span><span class="s2">&quot;i.jsxc-icon-menu&quot;</span><span class="o">))</span>
+<span class="n">threeLineButton</span><span class="o">.</span><span class="na">click</span><span class="o">()</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">manage</span><span class="o">().</span><span class="na">timeouts</span><span class="o">().</span><span class="na">implicitlyWait</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="w"> </span><span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">concurrent</span><span class="o">.</span><span class="na">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Add 3 seconds of think time</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">3000</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Step 21: Logout</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="kt">def</span><span class="w"> </span><span class="n">logoutButton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">findElement</span><span class="o">(</span><span class="n">org</span><span class="o">.</span><span class="na">openqa</span><span class="o">.</span><span class="na">selenium</span><span class="o">.</span><span class="na">By</span><span class="o">.</span><span class="na">cssSelector</span><span class="o">(</span><span class="s2">&quot;li.jsxc-logout&quot;</span><span class="o">))</span>
+<span class="n">logoutButton</span><span class="o">.</span><span class="na">click</span><span class="o">()</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">browser</span><span class="o">.</span><span class="na">manage</span><span class="o">().</span><span class="na">timeouts</span><span class="o">().</span><span class="na">implicitlyWait</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="w"> </span><span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">concurrent</span><span class="o">.</span><span class="na">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+
+<span class="c1">// Add 5 seconds of think time</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleStart</span><span class="o">()</span>
+<span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">5000</span><span class="o">)</span>
+<span class="n">WDS</span><span class="o">.</span><span class="na">sampleResult</span><span class="o">.</span><span class="na">sampleEnd</span><span class="o">()</span>
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -159,6 +544,7 @@ WDS.sampleResult.sampleEnd()</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="testscript.html" class="btn btn-neutral float-left" title="Test Script Recorder with JMeter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="commonissues.html" class="btn btn-neutral float-right" title="Common Issues and Troubleshooting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
