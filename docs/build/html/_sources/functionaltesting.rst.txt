@@ -1,8 +1,11 @@
+Selenium
+========
+
 Functional Testing with Selenium
-================================
+--------------------------------
 
 Getting Started
----------------
+^^^^^^^^^^^^^^^
 	#. Go to this website `jmeter-plugins.org <https://jmeter-plugins.org/wiki/WebDriverSampler/>`_ and click “Download”.
 
 
@@ -49,7 +52,7 @@ Getting Started
 
 
 Login Functionality Testing on `Carebiz <https://carebiz.dotdashtech.com/>`_
-----------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Description**:Verify that users can log in with valid credentials and are redirected to the home page.
 
@@ -115,7 +118,7 @@ Login Functionality Testing on `Carebiz <https://carebiz.dotdashtech.com/>`_
 
 
 Navigation Menu Functionality Testing on `Carebiz <https://carebiz.dotdashtech.com/>`_
---------------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Description**: Verify that clicking the “Navigation” menu item redirects the user to the select the options.
 
@@ -160,7 +163,7 @@ Navigation Menu Functionality Testing on `Carebiz <https://carebiz.dotdashtech.c
 
 
 Chat Message Functionality Testing on `Carebiz <https://carebiz.dotdashtech.com/>`_
------------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Description**: Tests that users can open the chat, select a contact, send a message, and close the chat window.
 
@@ -234,7 +237,8 @@ Chat Message Functionality Testing on `Carebiz <https://carebiz.dotdashtech.com/
 
 
 Sidebar Navigation and Settings Access on `Carebiz <https://carebiz.dotdashtech.com/>`_
----------------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 **Description**:
 	#. Open Sidebar: Clicks the sidebar button and checks if the sidebar opens.
 	#. Access Settings: Selects the settings option from the sidebar and verifies the settings menu opens.
@@ -345,7 +349,7 @@ Sidebar Navigation and Settings Access on `Carebiz <https://carebiz.dotdashtech.
 --------------
 
 Sidebar Settings and Logout Functionality on `Carebiz <https://carebiz.dotdashtech.com/>`_
---------------------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Description**: This test validates the Settings and Logout functionalities via the sidebar menu. It ensures that users can open the sidebar, access the settings menu, navigate to the “About” section to view the debug log, close the settings, and then successfully log out. This sequence is essential for testing both the application’s settings access and user session management.
 

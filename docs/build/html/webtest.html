@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Test Script Recorder with JMeter &mdash; Documentation of JMeter &amp; Selenium  documentation</title>
+  <title>JMeter &mdash; Documentation of JMeter &amp; Selenium  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=7ab3649f" />
       <link rel="stylesheet" type="text/css" href="_static/custom.css" />
@@ -20,7 +20,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Functional Testing with Selenium" href="functionaltesting.html" />
+    <link rel="next" title="Selenium" href="functionaltesting.html" />
     <link rel="prev" title="Installation Instruction" href="install.html" /> 
 </head>
 
@@ -48,15 +48,29 @@
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Test Script Recorder with JMeter</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#setting-up-the-proxy-for-the-recorder">Setting Up the Proxy for the Recorder</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#recording-user-interactions-for-load-testing">Recording User Interactions for Load Testing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#managing-and-editing-recorded-test-plans">Managing and Editing Recorded Test Plans</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#running-and-analyzing-recorded-test-plans">Running and Analyzing Recorded Test Plans</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">JMeter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#test-script-recorder-with-jmeter">Test Script Recorder with JMeter</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setting-up-the-proxy-for-the-recorder">Setting Up the Proxy for the Recorder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recording-user-interactions-for-load-testing">Recording User Interactions for Load Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#managing-and-editing-recorded-test-plans">Managing and Editing Recorded Test Plans</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-and-analyzing-recorded-test-plans">Running and Analyzing Recorded Test Plans</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="functionaltesting.html">Functional Testing with Selenium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#web-testing-plan-with-jmeter">Web Testing Plan with JMeter</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setting-up-the-test-plan-template">Setting Up the Test Plan Template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuring-the-test-scenario">Configuring the Test Scenario</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuring-the-instagram-login-test">Configuring the Instagram Login Test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuring-the-instagram-explore-test">Configuring the Instagram Explore Test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuring-the-instagram-inbox-test">Configuring the Instagram Inbox Test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuring-the-instagram-reels-test">Configuring the Instagram Reels Test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuring-the-instagram-account-test">Configuring the Instagram Account Test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#viewing-the-results-in-the-table">Viewing the Results in the Table</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="functionaltesting.html">Selenium</a></li>
 <li class="toctree-l1"><a class="reference internal" href="commonissues.html">Common Issues and Troubleshooting</a></li>
 </ul>
 
@@ -74,9 +88,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Test Script Recorder with JMeter</li>
+      <li class="breadcrumb-item active">JMeter</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/testscript.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/webtest.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -84,10 +98,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="test-script-recorder-with-jmeter">
-<h1>Test Script Recorder with JMeter<a class="headerlink" href="#test-script-recorder-with-jmeter" title="Link to this heading"></a></h1>
+  <section id="jmeter">
+<h1>JMeter<a class="headerlink" href="#jmeter" title="Link to this heading"></a></h1>
+<section id="test-script-recorder-with-jmeter">
+<h2>Test Script Recorder with JMeter<a class="headerlink" href="#test-script-recorder-with-jmeter" title="Link to this heading"></a></h2>
 <section id="getting-started">
-<h2>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h2>
+<h3>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h3>
 <p>Before you can begin using the Test Script Recorder, you need to set up a basic test plan in JMeter. This involves configuring your test plan and saving your work before starting the project.</p>
 <p><strong>Creating a Test Plan</strong>: To create a test plan:</p>
 <blockquote>
@@ -97,18 +113,21 @@
 <li><p>Configure the thread group to simulate multiple users and set loop counts and ramp-up periods as needed.</p></li>
 </ul>
 </div></blockquote>
+<img alt="_images/tah-1.png" src="_images/tah-1.png" />
 <p><strong>Saving the Test Plan</strong>: To avoid losing your work:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>Go to File &gt; Save As and name your test plan file. It is recommended to save the test plan at regular intervals to avoid losing progress.</p></li>
 </ul>
 </div></blockquote>
+<img alt="_images/tah-2.png" src="_images/tah-2.png" />
 </section>
 <hr class="docutils" />
 <section id="setting-up-the-proxy-for-the-recorder">
-<h2>Setting Up the Proxy for the Recorder<a class="headerlink" href="#setting-up-the-proxy-for-the-recorder" title="Link to this heading"></a></h2>
+<h3>Setting Up the Proxy for the Recorder<a class="headerlink" href="#setting-up-the-proxy-for-the-recorder" title="Link to this heading"></a></h3>
 <p>In order to use the Test Script Recorder, JMeter needs to intercept and capture your browser’s HTTP/HTTPS traffic. To do this, you must set up a proxy in both JMeter and your browser.</p>
-<ol class="arabic simple">
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>Configure JMeter Proxy</p></li>
 </ol>
 <blockquote>
@@ -117,6 +136,7 @@
 <li><p>In the HTTP(S) Test Script Recorder window, configure the port (default is 8888) and ensure Target Controller is set to the appropriate location where the recorded requests will be stored (usually under Thread Group).</p></li>
 </ul>
 </div></blockquote>
+<img alt="_images/tah-3.png" src="_images/tah-3.png" />
 <ol class="arabic simple" start="2">
 <li><p>Configure Your Browser</p></li>
 </ol>
@@ -127,12 +147,15 @@
 <li><p>In Firefox or Chrome, disable caching in the developer tools to prevent cached responses from being recorded.</p></li>
 </ul>
 </div></blockquote>
+<img alt="_images/tah-4.png" src="_images/tah-4.png" />
+</div></blockquote>
 </section>
 <hr class="docutils" />
 <section id="recording-user-interactions-for-load-testing">
-<h2>Recording User Interactions for Load Testing<a class="headerlink" href="#recording-user-interactions-for-load-testing" title="Link to this heading"></a></h2>
+<h3>Recording User Interactions for Load Testing<a class="headerlink" href="#recording-user-interactions-for-load-testing" title="Link to this heading"></a></h3>
 <p>Once the proxy is set up, you are ready to record real-time user interactions.</p>
-<ol class="arabic simple">
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>Start the Recording Session</p></li>
 </ol>
 <blockquote>
@@ -164,12 +187,14 @@
 <li><p>After recording all necessary actions, save the test plan by clicking File &gt; Save.</p></li>
 </ul>
 </div></blockquote>
+</div></blockquote>
 </section>
 <hr class="docutils" />
 <section id="managing-and-editing-recorded-test-plans">
-<h2>Managing and Editing Recorded Test Plans<a class="headerlink" href="#managing-and-editing-recorded-test-plans" title="Link to this heading"></a></h2>
+<h3>Managing and Editing Recorded Test Plans<a class="headerlink" href="#managing-and-editing-recorded-test-plans" title="Link to this heading"></a></h3>
 <p>Once your recording is complete, it’s often necessary to clean up and fine-tune the test plan for efficiency and clarity.</p>
-<ol class="arabic simple">
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>Remove Unnecessary Requests</p></li>
 </ol>
 <blockquote>
@@ -193,12 +218,14 @@
 <li><p>Use assertions to validate server responses, and add timers to simulate real user think times between requests.</p></li>
 </ul>
 </div></blockquote>
+</div></blockquote>
 </section>
 <hr class="docutils" />
 <section id="running-and-analyzing-recorded-test-plans">
-<h2>Running and Analyzing Recorded Test Plans<a class="headerlink" href="#running-and-analyzing-recorded-test-plans" title="Link to this heading"></a></h2>
+<h3>Running and Analyzing Recorded Test Plans<a class="headerlink" href="#running-and-analyzing-recorded-test-plans" title="Link to this heading"></a></h3>
 <p>After creating and refining the test plan, you can execute it to simulate the load and analyze the system’s performance.</p>
-<ol class="arabic simple">
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>Running the Test Plan</p></li>
 </ol>
 <blockquote>
@@ -224,6 +251,78 @@
 <li><p>Analyze slow responses or failed requests to identify performance bottlenecks. Use these insights to adjust system configurations or optimize the application.</p></li>
 </ul>
 </div></blockquote>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="web-testing-plan-with-jmeter">
+<h2>Web Testing Plan with JMeter<a class="headerlink" href="#web-testing-plan-with-jmeter" title="Link to this heading"></a></h2>
+<p>Performance testing is essential to ensure that web applications can manage real-world user loads without sacrificing functionality or speed. A web testing plan in JMeter enables effective performance and load testing by simulating multiple users accessing the application simultaneously. As an open-source tool, Apache JMeter is highly valued for its flexibility and robustness in web performance testing. By replicating high user traffic, JMeter allows testers to monitor performance, pinpoint bottlenecks, and assess overall system reliability under load conditions.</p>
+<hr class="docutils" />
+<p>This testing plan outlines the process for creating a JMeter test plan for Instagram, a widely used social media platform. The test will simulate high user loads on various sections of Instagram, including the Login, Explore, Inbox, Reels, and Account sections, to assess system performance and responsiveness. This test will demonstrate the site’s ability to handle concurrent users under different load scenarios, as well as monitor for any performance issues that may arise.</p>
+<section id="setting-up-the-test-plan-template">
+<h3>Setting Up the Test Plan Template<a class="headerlink" href="#setting-up-the-test-plan-template" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Open Jmeter Application &gt; Click File &gt; Click Templates.</p></li>
+<li><p>Search for option “Building a Web Test Plan” and click “Create it”.</p></li>
+</ol>
+<img alt="_images/web-1.png" src="_images/web-1.png" />
+<img alt="_images/web-2.png" src="_images/web-2.png" />
+</div></blockquote>
+</section>
+<section id="configuring-the-test-scenario">
+<h3>Configuring the Test Scenario<a class="headerlink" href="#configuring-the-test-scenario" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>This will be “Scenario 1” by default. This section the tester can change the amount of users, the period and also loop count.</p>
+<img alt="_images/web-3.png" src="_images/web-3.png" />
+</div></blockquote>
+</section>
+<section id="configuring-the-instagram-login-test">
+<h3>Configuring the Instagram Login Test<a class="headerlink" href="#configuring-the-instagram-login-test" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>For this section, the tested website is Instagram. This is for Instagram Login. The tester needs to retrieve the server name or ip, modify the protocol, and can modify the path according to the tested website.</p>
+<img alt="_images/web-4.png" src="_images/web-4.png" />
+</div></blockquote>
+</section>
+<section id="configuring-the-instagram-explore-test">
+<h3>Configuring the Instagram Explore Test<a class="headerlink" href="#configuring-the-instagram-explore-test" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>For this section, the tested section is Instagram Explore. So the tester needs to modify the server name and also the path.</p>
+<img alt="_images/web-5.png" src="_images/web-5.png" />
+</div></blockquote>
+</section>
+<section id="configuring-the-instagram-inbox-test">
+<h3>Configuring the Instagram Inbox Test<a class="headerlink" href="#configuring-the-instagram-inbox-test" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>For this section, the tested section is Instagram Inbox. So the tester needs to modify the server name and also the path.</p>
+<img alt="_images/web-6.png" src="_images/web-6.png" />
+</div></blockquote>
+</section>
+<section id="configuring-the-instagram-reels-test">
+<h3>Configuring the Instagram Reels Test<a class="headerlink" href="#configuring-the-instagram-reels-test" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>For this section, the tested section is Instagram Reels. So the tester needs to modify the server name and also the path.</p>
+<img alt="_images/web-7.png" src="_images/web-7.png" />
+</div></blockquote>
+</section>
+<section id="configuring-the-instagram-account-test">
+<h3>Configuring the Instagram Account Test<a class="headerlink" href="#configuring-the-instagram-account-test" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>For this section, the tested section is Instagram Account. So the tester needs to modify the server name and also the path.</p>
+<img alt="_images/web-8.png" src="_images/web-8.png" />
+</div></blockquote>
+</section>
+<section id="viewing-the-results-in-the-table">
+<h3>Viewing the Results in the Table<a class="headerlink" href="#viewing-the-results-in-the-table" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Once the test is executed, the tester can view the results in the View Result Tree listener. The table will display performance statistics for the test, such as response times, error rates, and throughput.</p></li>
+<li><p>The displayed statistics help assess the system’s performance under the specified load and identify any bottlenecks or issues encountered during testing.</p></li>
+</ul>
+<img alt="_images/web-9.png" src="_images/web-9.png" />
+</div></blockquote>
+</section>
 </section>
 </section>
 
@@ -232,7 +331,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="install.html" class="btn btn-neutral float-left" title="Installation Instruction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="functionaltesting.html" class="btn btn-neutral float-right" title="Functional Testing with Selenium" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="functionaltesting.html" class="btn btn-neutral float-right" title="Selenium" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

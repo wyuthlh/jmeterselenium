@@ -27,8 +27,8 @@ Let’s get started on the journey to improving the quality of your applications
    introduction
    overview
    prerequisites
-   testscript
+   webtest
    functionaltesting
    commonissues
-   conclusion
-   references
+   
+   

@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Functional Testing with Selenium &mdash; Documentation of JMeter &amp; Selenium  documentation</title>
+  <title>Selenium &mdash; Documentation of JMeter &amp; Selenium  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=7ab3649f" />
       <link rel="stylesheet" type="text/css" href="_static/custom.css" />
@@ -21,7 +21,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Common Issues and Troubleshooting" href="commonissues.html" />
-    <link rel="prev" title="Test Script Recorder with JMeter" href="testscript.html" /> 
+    <link rel="prev" title="JMeter" href="webtest.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,14 +48,17 @@
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
-<li class="toctree-l1"><a class="reference internal" href="testscript.html">Test Script Recorder with JMeter</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Functional Testing with Selenium</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#login-functionality-testing-on-carebiz">Login Functionality Testing on Carebiz</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#navigation-menu-functionality-testing-on-carebiz">Navigation Menu Functionality Testing on Carebiz</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#chat-message-functionality-testing-on-carebiz">Chat Message Functionality Testing on Carebiz</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sidebar-navigation-and-settings-access-on-carebiz">Sidebar Navigation and Settings Access on Carebiz</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sidebar-settings-and-logout-functionality-on-carebiz">Sidebar Settings and Logout Functionality on Carebiz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webtest.html">JMeter</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Selenium</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functional-testing-with-selenium">Functional Testing with Selenium</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#login-functionality-testing-on-carebiz">Login Functionality Testing on Carebiz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#navigation-menu-functionality-testing-on-carebiz">Navigation Menu Functionality Testing on Carebiz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#chat-message-functionality-testing-on-carebiz">Chat Message Functionality Testing on Carebiz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sidebar-navigation-and-settings-access-on-carebiz">Sidebar Navigation and Settings Access on Carebiz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sidebar-settings-and-logout-functionality-on-carebiz">Sidebar Settings and Logout Functionality on Carebiz</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="commonissues.html">Common Issues and Troubleshooting</a></li>
@@ -75,7 +78,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Functional Testing with Selenium</li>
+      <li class="breadcrumb-item active">Selenium</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/functionaltesting.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -85,10 +88,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="functional-testing-with-selenium">
-<h1>Functional Testing with Selenium<a class="headerlink" href="#functional-testing-with-selenium" title="Link to this heading"></a></h1>
+  <section id="selenium">
+<h1>Selenium<a class="headerlink" href="#selenium" title="Link to this heading"></a></h1>
+<section id="functional-testing-with-selenium">
+<h2>Functional Testing with Selenium<a class="headerlink" href="#functional-testing-with-selenium" title="Link to this heading"></a></h2>
 <section id="getting-started">
-<h2>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h2>
+<h3>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h3>
 <blockquote>
 <div><ol class="arabic">
 <li><p>Go to this website <a class="reference external" href="https://jmeter-plugins.org/wiki/WebDriverSampler/">jmeter-plugins.org</a> and click “Download”.</p>
@@ -145,7 +150,7 @@
 </div></blockquote>
 </section>
 <section id="login-functionality-testing-on-carebiz">
-<h2>Login Functionality Testing on <a class="reference external" href="https://carebiz.dotdashtech.com/">Carebiz</a><a class="headerlink" href="#login-functionality-testing-on-carebiz" title="Link to this heading"></a></h2>
+<h3>Login Functionality Testing on <a class="reference external" href="https://carebiz.dotdashtech.com/">Carebiz</a><a class="headerlink" href="#login-functionality-testing-on-carebiz" title="Link to this heading"></a></h3>
 <p><strong>Description</strong>:Verify that users can log in with valid credentials and are redirected to the home page.</p>
 <dl class="simple">
 <dt><strong>Steps</strong>:</dt><dd><ol class="lowerroman simple">
@@ -208,7 +213,7 @@
 </section>
 <hr class="docutils" />
 <section id="navigation-menu-functionality-testing-on-carebiz">
-<h2>Navigation Menu Functionality Testing on <a class="reference external" href="https://carebiz.dotdashtech.com/">Carebiz</a><a class="headerlink" href="#navigation-menu-functionality-testing-on-carebiz" title="Link to this heading"></a></h2>
+<h3>Navigation Menu Functionality Testing on <a class="reference external" href="https://carebiz.dotdashtech.com/">Carebiz</a><a class="headerlink" href="#navigation-menu-functionality-testing-on-carebiz" title="Link to this heading"></a></h3>
 <p><strong>Description</strong>: Verify that clicking the “Navigation” menu item redirects the user to the select the options.</p>
 <dl class="simple">
 <dt><strong>Steps</strong>:</dt><dd><ol class="lowerroman simple">
@@ -248,7 +253,7 @@
 </section>
 <hr class="docutils" />
 <section id="chat-message-functionality-testing-on-carebiz">
-<h2>Chat Message Functionality Testing on <a class="reference external" href="https://carebiz.dotdashtech.com/">Carebiz</a><a class="headerlink" href="#chat-message-functionality-testing-on-carebiz" title="Link to this heading"></a></h2>
+<h3>Chat Message Functionality Testing on <a class="reference external" href="https://carebiz.dotdashtech.com/">Carebiz</a><a class="headerlink" href="#chat-message-functionality-testing-on-carebiz" title="Link to this heading"></a></h3>
 <p><strong>Description</strong>: Tests that users can open the chat, select a contact, send a message, and close the chat window.</p>
 <dl class="simple">
 <dt><strong>Steps</strong>:</dt><dd><ol class="lowerroman simple">
@@ -320,7 +325,7 @@
 </section>
 <hr class="docutils" />
 <section id="sidebar-navigation-and-settings-access-on-carebiz">
-<h2>Sidebar Navigation and Settings Access on <a class="reference external" href="https://carebiz.dotdashtech.com/">Carebiz</a><a class="headerlink" href="#sidebar-navigation-and-settings-access-on-carebiz" title="Link to this heading"></a></h2>
+<h3>Sidebar Navigation and Settings Access on <a class="reference external" href="https://carebiz.dotdashtech.com/">Carebiz</a><a class="headerlink" href="#sidebar-navigation-and-settings-access-on-carebiz" title="Link to this heading"></a></h3>
 <dl class="simple">
 <dt><strong>Description</strong>:</dt><dd><ol class="arabic simple">
 <li><p>Open Sidebar: Clicks the sidebar button and checks if the sidebar opens.</p></li>
@@ -433,7 +438,7 @@
 </section>
 <hr class="docutils" />
 <section id="sidebar-settings-and-logout-functionality-on-carebiz">
-<h2>Sidebar Settings and Logout Functionality on <a class="reference external" href="https://carebiz.dotdashtech.com/">Carebiz</a><a class="headerlink" href="#sidebar-settings-and-logout-functionality-on-carebiz" title="Link to this heading"></a></h2>
+<h3>Sidebar Settings and Logout Functionality on <a class="reference external" href="https://carebiz.dotdashtech.com/">Carebiz</a><a class="headerlink" href="#sidebar-settings-and-logout-functionality-on-carebiz" title="Link to this heading"></a></h3>
 <p><strong>Description</strong>: This test validates the Settings and Logout functionalities via the sidebar menu. It ensures that users can open the sidebar, access the settings menu, navigate to the “About” section to view the debug log, close the settings, and then successfully log out. This sequence is essential for testing both the application’s settings access and user session management.</p>
 <dl class="simple">
 <dt><strong>Steps</strong>:</dt><dd><ol class="lowerroman simple">
@@ -538,12 +543,13 @@
 </div>
 </section>
 </section>
+</section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="testscript.html" class="btn btn-neutral float-left" title="Test Script Recorder with JMeter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="webtest.html" class="btn btn-neutral float-left" title="JMeter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="commonissues.html" class="btn btn-neutral float-right" title="Common Issues and Troubleshooting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
