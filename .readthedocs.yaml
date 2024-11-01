@@ -9,9 +9,9 @@ sphinx:
 
 # Python configuration
 python:
-  version: 3.8
+  version: 3.8  # Adjust to your Python version if necessary
   install:
-    - requirements: source/requirements.txt
+    - requirements: source/requirements.txt  # Path to your requirements file
 
 # Optional: specify output formats if you want PDFs, ePubs, etc.
 formats:
