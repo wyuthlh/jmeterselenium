@@ -7,7 +7,7 @@ version: 2
 build:
   os: ubuntu-22.04  # Use a valid OS like 'ubuntu-22.04'
   tools:
-    - sphinx  # Specify the tools you want to use, in this case, Sphinx
+    sphinx: {}  # Specify Sphinx as a tool (using an empty dictionary)
 
 # Sphinx configuration
 sphinx:
