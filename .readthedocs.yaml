@@ -6,6 +6,11 @@ version: 2
 # Build configuration
 build:
   os: ubuntu-22.04  # Use a valid OS like 'ubuntu-22.04'
+<<<<<<< HEAD
+=======
+  tools:
+    - sphinx  # Specify the tools you want to use, in this case, Sphinx
+>>>>>>> d124d264feb30a5e39221920c1d6fa595061c6a0
 
 # Sphinx configuration
 sphinx:
