@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.db
+*.egg-info/
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Sphinx build files
+_build/
+docs/_build/
+docs/.doctrees/
+docs/.ipynb_checkpoints/
+*.log
+
+# IDE and editor files
+*.swp
+*.sublime-workspace
+*.sublime-project
+*.idea/
+.vscode/
+*.DS_Store
+
+# Other files to ignore
+*.egg
+*.egg-info
+*.whl
