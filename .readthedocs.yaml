@@ -6,8 +6,6 @@ version: 2
 # Build configuration
 build:
   os: ubuntu-22.04  # Use a valid OS like 'ubuntu-22.04'
-  tools:
-    sphinx: {}  # Specify Sphinx as a tool (using an empty dictionary)
 
 # Sphinx configuration
 sphinx:
@@ -15,7 +13,7 @@ sphinx:
 
 # Python configuration
 python:
-  version: 3.8  # Adjust to your Python version if necessary
+  version: 3.13  # Adjust to your Python version if necessary
   install:
     - requirements: source/requirements.txt  # Path to your requirements file
 
