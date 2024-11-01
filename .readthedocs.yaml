@@ -3,16 +3,23 @@
 # Required version of Read the Docs configuration
 version: 2
 
+# Build configuration
+build:
+  os: ubuntu-22.04  # Use a valid OS like 'ubuntu-22.04'
+  tools:
+    - sphinx  # Specify the tools you want to use, in this case, Sphinx
+
 # Sphinx configuration
 sphinx:
-  configuration: source/conf.py
+  configuration: source/conf.py  # Path to your Sphinx configuration file
 
 # Python configuration
 python:
   version: 3.8  # Adjust to your Python version if necessary
   install:
-    - requirements: requirements.txt  # Path to your requirements file
+    - requirements: source/requirements.txt  # Path to your requirements file
 
 # Optional: specify output formats if you want PDFs, ePubs, etc.
 formats:
   - pdf
+  - epub
